@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"regexp"
 	"strconv"
 	"strings"
 	"unicode/utf8"
@@ -18,7 +19,8 @@ func main() {
 	//string_opera()
 	//coverNum()
 	//charAtIndex()
-	changeCharAtIndex()
+	//changeCharAtIndex()
+	//regexTest()
 }
 
 // 统计字符长度
@@ -144,4 +146,34 @@ func changeCharAtIndex() {
 	runes[6] = '视'
 	str2Change := string(runes)
 	fmt.Println(str2Change) // hello 视界
+}
+
+// 正则匹配
+func regexTest() {
+	str := "John: 2578.34 William: 4567.23 Steve: 5632.18" // 目标字符串
+	pattern := "[0-9]+.[0-9]+"                             // 正则表达式
+
+	// 快速判断字符串正则匹配
+	ok1, _ := regexp.Match(pattern, []byte(str))
+	ok2, _ := regexp.MatchString(pattern, str)
+	fmt.Println(ok1, ok2) // true true
+
+	// 正则查找所有匹配项
+	re, _ := regexp.Compile(pattern)
+	maStrs := re.FindAllString(str, len(str))
+	for _, maStr := range maStrs {
+		fmt.Print(maStr, " ")
+	}
+	println() // 2578.34 4567.23 5632.18
+
+	// 正则替换匹配项
+	r1 := re.ReplaceAllString(str, "####")
+	fmt.Println(r1) // John: #### William: #### Steve: ####
+
+	// 正则替换匹配项，使用函数指定替换行为
+	replaceFunc := func(s string) string {
+		return strings.ReplaceAll(s, ".", "#")
+	}
+	r2 := re.ReplaceAllStringFunc(str, replaceFunc)
+	fmt.Println(r2) // John: 2578#34 William: 4567#23 Steve: 5632#18
 }
