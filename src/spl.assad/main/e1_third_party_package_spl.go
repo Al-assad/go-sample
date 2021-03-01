@@ -15,6 +15,7 @@ import (
 //        go get github.com/deckarep/golang-set
 // 方式 2：vendor
 //        GOPATH=${project_path} && cd ${project_path}/src
+//		  govendor init
 //        govendor fetch github.com/deckarep/golang-set
 
 func main() {
