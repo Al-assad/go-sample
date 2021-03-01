@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
-	myfoo "site.nobody/func_foo"
-	"spl.assad/func_foo"
+	myfoo "spl.assad/func_foo"
 	"spl.assad/main/mypack"
 )
 
@@ -33,12 +32,6 @@ func helloWorld() {
 
 // 包外函数 func_foo/foo.go 调用
 func test2() {
-	var r = func_foo.Minus(10, 20)
-	fmt.Println(r)
-}
-
-// 包外函数重命名调用
-func test3() {
 	var r = myfoo.Minus(10, 20)
 	fmt.Println(r)
 }
