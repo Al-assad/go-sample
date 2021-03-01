@@ -24,11 +24,11 @@ func helloWorld() {
 }
 
 // 包内函数 foo.go 调用
-//func test1() {
-//	var r1 = sum(1, 2)
-//	var r2 = Sum(3, 4)
-//	fmt.Println(r1 + r2)
-//}
+func test1() {
+	var r1 = sum(1, 2)
+	var r2 = Sum(3, 4)
+	fmt.Println(r1 + r2)
+}
 
 // 包外函数 func_foo/foo.go 调用
 func test2() {

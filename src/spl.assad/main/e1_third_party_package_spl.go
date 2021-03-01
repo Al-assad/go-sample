@@ -11,8 +11,10 @@ import (
 
 // 第三方依赖安装方式：
 // 方式 1：go get
+//        GOPATH=${project_path} && cd ${project_path}/src
 //        go get github.com/deckarep/golang-set
 // 方式 2：vendor
+//        GOPATH=${project_path} && cd ${project_path}/src
 //        govendor fetch github.com/deckarep/golang-set
 
 func main() {
