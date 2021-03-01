@@ -5,6 +5,7 @@ import (
 	"runtime"
 	myfoo "site.nobody/func_foo"
 	"spl.assad/func_foo"
+	"spl.assad/main/mypack"
 )
 
 // 函数调用测试
@@ -13,7 +14,8 @@ func main() {
 	//helloWorld()
 	//test1()
 	//test2()
-	test3()
+	//test3()
+	testImHere()
 }
 
 // 文件内函数
@@ -39,4 +41,9 @@ func test2() {
 func test3() {
 	var r = myfoo.Minus(10, 20)
 	fmt.Println(r)
+}
+
+// 调用子包函数
+func testImHere() {
+	mypack.ImHere()
 }
