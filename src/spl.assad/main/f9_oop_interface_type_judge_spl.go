@@ -55,7 +55,7 @@ func main() {
 
 }
 
-// 接口类型判断
+// 接口类型判断，使用类型断言
 func whatFuckIsIt(pet Pet) {
 	if _, ok := pet.(*Kitten); ok {
 		fmt.Println("is Kitten")
