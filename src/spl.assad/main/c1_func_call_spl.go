@@ -4,9 +4,7 @@ import (
 	"fmt"
 	"runtime"
 	myfoo "spl.assad/func_foo"
-	main2 "spl.assad/main/a_datatype"
-	main3 "spl.assad/main/ab_datatype_control"
-	"spl.assad/main/c_function/mypack"
+	"spl.assad/main/mypack"
 )
 
 // 函数调用测试
@@ -25,10 +23,10 @@ func helloWorld() {
 	fmt.Println(runtime.Version())
 }
 
-// 包内函数 foo.go 调用
+// 包内函数 a_foo.go 调用
 func test1() {
-	var r1 = main2.sum(1, 2)
-	var r2 = main3.Sum(3, 4)
+	var r1 = sum(1, 2)
+	var r2 = Sum(3, 4)
 	fmt.Println(r1 + r2)
 }
 
