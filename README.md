@@ -2,7 +2,7 @@
 
 <br>
 
-*auto create by [readme_catalog_builder](src/main/readme_catalog_builder.go)*
+*auto created by [readme_catalog_builder](src/main/readme_catalog_builder.go)*
 
 <br>
 
