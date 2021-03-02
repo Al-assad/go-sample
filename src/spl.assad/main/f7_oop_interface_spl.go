@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-// interface 接口使用示例
+// @desc interface 接口使用示例
 
 type Biology interface {
 	Eat() string

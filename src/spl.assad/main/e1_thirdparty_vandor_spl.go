@@ -5,7 +5,7 @@ import (
 	mapset "github.com/deckarep/golang-set"
 )
 
-// vendor 安装、调用第三方包依赖
+// @desc vendor 安装、调用第三方包依赖
 
 // 使用 https://github.com/deckarep/golang-set 实现的 set 结构
 

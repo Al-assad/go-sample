@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-// go json 处理（encoding/json）
+// @desc go json 处理（encoding/json）
 // https://blog.golang.org/json
 
 // JSON 与 Go 类型对应如下：

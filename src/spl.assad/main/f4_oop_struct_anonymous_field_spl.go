@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// go struct 匿名字段、匿名内嵌结构体 示例
+// @desc go struct 匿名字段、匿名内嵌结构体 示例
 
 // 外部结构体
 type outerS struct {

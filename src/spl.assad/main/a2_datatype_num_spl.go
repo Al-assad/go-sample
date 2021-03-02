@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// 数值类型使用
+// @desc 数值类型使用
 
 func main() {
 	//test8()

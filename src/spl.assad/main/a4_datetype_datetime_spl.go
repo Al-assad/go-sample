@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// 时间日期类型使用
+// @desc 时间日期类型使用
 
 func main() {
 	// 获取当前时间

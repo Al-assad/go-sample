@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-// go xml 处理
+// @desc go xml 处理
 
 // https://golang.org/pkg/encoding/xml/
 

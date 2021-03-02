@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-// 文件拷贝示例
+// @desc 文件拷贝示例
 
 func main() {
 	//copy1()

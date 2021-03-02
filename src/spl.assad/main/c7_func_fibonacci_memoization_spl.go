@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// 递归函数示例， fibonacci 计算，使用内存缓存
+// @desc 递归函数示例， fibonacci 计算，使用内存缓存
 
 var fibs [50]uint64
 

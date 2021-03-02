@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// 递归函数示例， fibonacci 计算
+// @desc 递归函数示例， fibonacci 计算
 
 func main() {
 	start := time.Now()

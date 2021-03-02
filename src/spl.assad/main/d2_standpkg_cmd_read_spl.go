@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-// 从控制台读取输入（os.Stdin）
+// @desc 从控制台读取输入（os.Stdin）
 
 func main() {
 	//usePrintln()

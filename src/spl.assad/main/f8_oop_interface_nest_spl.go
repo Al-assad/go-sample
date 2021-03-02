@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// interface 接口嵌套示例
+// @desc interface 接口嵌套示例
 
 type In interface {
 	Set(param int)

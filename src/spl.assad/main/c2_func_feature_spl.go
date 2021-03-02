@@ -2,7 +2,7 @@ package main
 
 import "time"
 
-// 函数特性示例
+// @desc 函数特性示例
 
 func main() {
 	println(add(3, 4))

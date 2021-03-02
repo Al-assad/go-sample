@@ -6,7 +6,7 @@ import (
 	"runtime"
 )
 
-// go 显式调用 runtime gc
+// @desc go 显式调用 runtime gc
 
 func main() {
 	inFile, _ := os.Open(".gitignore")

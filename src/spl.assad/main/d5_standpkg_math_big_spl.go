@@ -6,7 +6,7 @@ import (
 	"math/big"
 )
 
-// go math/big 精密计算
+// @desc go math/big 精密计算
 
 func main() {
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// 从启动命令行读取参数 os.Args
+// @desc 从启动命令行读取参数 os.Args
 
 func main() {
 	//  获取参数列表

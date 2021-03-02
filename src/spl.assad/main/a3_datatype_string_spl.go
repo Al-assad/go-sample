@@ -8,7 +8,7 @@ import (
 	"unicode/utf8"
 )
 
-// 字符串类型使用
+// @desc 字符串类型使用
 
 func main() {
 	print("hello world \n")

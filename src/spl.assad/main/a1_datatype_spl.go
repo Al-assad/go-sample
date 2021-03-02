@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// go 基本数据类型
+// @desc go 基本数据类型
 
 // 常量
 const PI = 3.141592

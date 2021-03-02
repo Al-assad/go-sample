@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-// go struct 标签定义、反射获取示例
+// @desc go struct 标签定义、反射获取示例
 
 type User4 struct {
 	name  string "this is username"

@@ -7,7 +7,7 @@ import (
 	"spl.assad/main/mypack"
 )
 
-// 函数调用示例
+// @desc 函数调用示例
 
 func main() {
 	//helloWorld()

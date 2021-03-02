@@ -6,7 +6,7 @@ import (
 	"strconv"
 )
 
-// go struct 结构体示例
+// @desc go struct 结构体示例
 
 // 简单结构体
 type User struct {

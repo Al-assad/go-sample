@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 一个简单的 Node 节点数据结构
+// @desc 一个简单的 Node 节点数据结构
 
 type Node struct {
 	le   *Node

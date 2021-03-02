@@ -7,7 +7,7 @@ import (
 	"io"
 )
 
-// go 加解密处理（sha、md5 等）
+// @desc go 加解密处理（sha、md5 等）
 // 标准库加解-编解码包位于 encoding 包下：https://golang.org/pkg/encoding/
 
 // hash 包：实现了 adler32、crc32、crc64 和 fnv 校验；

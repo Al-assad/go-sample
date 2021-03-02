@@ -6,7 +6,7 @@ import (
 	"math/rand"
 )
 
-// 数组，切片（slice）使用示例
+// @desc 数组，切片（slice）使用示例
 
 func main() {
 	//arrayTest()

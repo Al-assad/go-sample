@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-// 文件写入示例
+// @desc 文件写入示例
 
 func main() {
 	writeFile()

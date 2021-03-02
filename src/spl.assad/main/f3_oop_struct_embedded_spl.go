@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// go struct 内嵌结构示例
+// @desc go struct 内嵌结构示例
 
 // 外部结构体
 type outerSt struct {

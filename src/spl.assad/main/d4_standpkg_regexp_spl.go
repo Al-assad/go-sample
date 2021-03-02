@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// go regexp 正则匹配
+// @desc go regexp 正则匹配
 
 func main() {
 	str := "John: 2578.34 William: 4567.23 Steve: 5632.18" // 目标字符串

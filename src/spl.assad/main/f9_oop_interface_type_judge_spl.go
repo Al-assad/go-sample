@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// go 接口类型判断
+// @desc go 接口类型判断
 
 type Pet interface {
 	Call() string

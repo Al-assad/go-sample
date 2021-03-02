@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-// 文件读取示例
+// @desc 文件读取示例
 
 func main() {
 	readFile()
