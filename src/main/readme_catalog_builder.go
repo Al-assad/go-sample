@@ -9,6 +9,7 @@ import (
 	"os"
 	"regexp"
 	"sort"
+	"strconv"
 	"strings"
 )
 
@@ -20,7 +21,7 @@ var (
 
 func init() {
 	fileNoteRe, _ = regexp.Compile("//.*@desc (.+)")
-	specFileNameRe, _ = regexp.Compile("([a-zA-Z])+[0-9]+_(.*)")
+	specFileNameRe, _ = regexp.Compile("([a-zA-Z])+([0-9]+)_(.*)")
 	pkgDicts = []PkgDesc{
 		{"./src/spl.assad/main",
 			"Go 基本使用示例代码",
@@ -55,7 +56,6 @@ type PkgDesc struct {
 
 func main() {
 	BuildAllCatalog()
-
 }
 
 // 构建字典中所有的包 README 索引，并输出到终端
@@ -101,7 +101,21 @@ func BuildCatalog(pkgDesc PkgDesc) string {
 
 	// 按照文件排序
 	sort.Slice(goItems, func(i, j int) bool {
-		return goItems[i].Name < goItems[j].Name
+		m := specFileNameRe.FindStringSubmatch(goItems[i].Name)
+		n := specFileNameRe.FindStringSubmatch(goItems[j].Name)
+		if len(m) >= 3 && len(n) >= 3 {
+			if m[1] < n[1] {
+				return true
+			} else if m[1] > n[1] {
+				return false
+			} else {
+				im2, _ := strconv.Atoi(m[2])
+				in2, _ := strconv.Atoi(n[2])
+				return im2 < in2
+			}
+		} else {
+			return goItems[i].Name < goItems[j].Name
+		}
 	})
 
 	// 文件名格式化
@@ -119,7 +133,7 @@ func BuildCatalog(pkgDesc PkgDesc) string {
 		mdlines = buildMdLines(&goItems)
 	}
 
-	resultContent = resultContent + "\n" + strings.Join(mdlines, "\n") + "<br>"
+	resultContent = resultContent + "\n" + strings.Join(mdlines, "\n") + "\n<br>"
 	return resultContent
 }
 
@@ -143,7 +157,7 @@ func getFirstNoteFromGoFile(file *os.File) string {
 func formatFileName(name string) (fName string, group string) {
 	match := specFileNameRe.FindStringSubmatch(name)
 	if len(match) > 0 {
-		return match[2], match[1]
+		return match[3], match[1]
 	} else {
 		return name, ""
 	}
