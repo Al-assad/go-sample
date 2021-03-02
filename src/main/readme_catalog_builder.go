@@ -119,7 +119,7 @@ func BuildCatalog(pkgDesc PkgDesc) string {
 		mdlines = buildMdLines(&goItems)
 	}
 
-	resultContent = resultContent + "\n" + strings.Join(mdlines, "\n")
+	resultContent = resultContent + "\n" + strings.Join(mdlines, "\n") + "<br>"
 	return resultContent
 }
 
