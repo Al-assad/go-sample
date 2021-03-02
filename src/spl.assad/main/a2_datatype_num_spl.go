@@ -8,9 +8,7 @@ import (
 	"time"
 )
 
-/*
-	数值类型测试
-*/
+// 数值类型使用
 
 func main() {
 	//test8()

@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// 控制结构语句测试, if-else, for-i, for-range, for-condition, goto
+// 控制结构语句（if-else, for-i, for-range, for-condition, goto）
 
 func main() {
 	//ifElseTest()

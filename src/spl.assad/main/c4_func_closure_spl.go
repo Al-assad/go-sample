@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-// 闭包（匿名函数）示例
+// closure 闭包（匿名函数）示例
 
 func main() {
 

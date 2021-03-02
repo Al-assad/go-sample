@@ -5,9 +5,8 @@ import (
 	"time"
 )
 
-/**
-时间日期类型测试
-*/
+// 时间日期类型使用
+
 func main() {
 	// 获取当前时间
 	var now time.Time = time.Now()

@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-// Map 结构使用示例
+// Map 使用示例
 
 func main() {
 	//mapDefine()

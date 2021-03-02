@@ -1,6 +1,6 @@
 package main
 
-// go os 调用，运行系统命令等示例
+// go os 包调用，运行系统命令等示例
 import (
 	"fmt"
 	"os"

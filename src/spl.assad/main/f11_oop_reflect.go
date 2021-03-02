@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-// go 类型反射， TypeOf，ValueOf
+// go 类型反射示例（TypeOf，ValueOf）
 
 type User5 struct {
 	name  string

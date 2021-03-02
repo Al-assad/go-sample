@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// 函数回调示例，使用其他函数作为入参
+// lambda 回调函数示例（使用其他函数作为入参）
 
 func main() {
 	compute(233, 104, add2)

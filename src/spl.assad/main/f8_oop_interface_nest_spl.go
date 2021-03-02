@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// go interface 接口嵌套示例
+// interface 接口嵌套示例
 
 type In interface {
 	Set(param int)

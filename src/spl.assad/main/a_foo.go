@@ -1,9 +1,5 @@
 package main
 
-/*
-	函数测试
-*/
-
 // 包内可访问函数
 func sum(a, b int) int {
 	return a + b

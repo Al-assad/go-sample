@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-// go interface 接口使用示例
+// interface 接口使用示例
 
 type Biology interface {
 	Eat() string

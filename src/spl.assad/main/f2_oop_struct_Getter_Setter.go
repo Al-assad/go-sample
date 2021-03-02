@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-// go struct 结构体示例，字段 Getter、Setter
+// go struct 结构体示例（字段 Getter、Setter）
 
 // 简单结构体
 type User3 struct {
