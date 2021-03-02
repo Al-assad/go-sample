@@ -9,7 +9,7 @@ import (
 
 func main() {
 	//osTest()
-	osCmdTest()
+	//osCmdTest()
 }
 
 // os 包 - 获取系统信息，进行系统操作等
