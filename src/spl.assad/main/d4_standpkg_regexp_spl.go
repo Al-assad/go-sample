@@ -36,4 +36,11 @@ func main() {
 	r2 := re.ReplaceAllStringFunc(str, replaceFunc)
 	fmt.Println(r2) // John: 2578#34 William: 4567#23 Steve: 5632#18
 
+	// 查找子匹配项
+	str2 := "John: 2578.34 William: 4567.23 Steve: 5632.18"
+	pattern2 := "Steve:\\s*([0-9]+.[0-9]+)\\s*"
+	re2, _ := regexp.Compile(pattern2)
+	ms := re2.FindStringSubmatch(str2)
+	fmt.Println(ms[1]) // 5632.18
+
 }
