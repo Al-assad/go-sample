@@ -11,7 +11,7 @@ import (
 
 func main() {
 	writeFile()
-	writeAllString()
+	//writeAllString()
 }
 
 // 文件写入
@@ -19,8 +19,10 @@ func writeFile() {
 	// 打开文件，只允许写入、不存在即创建
 	// os.O_RDONLY：只读
 	// os.O_WRONLY：只写
+	// os.O_RDWR：读写
 	// os.O_CREATE：创建：如果指定文件不存在，就创建该文件
 	// os.O_TRUNC：截断：如果指定文件已存在，就将该文件的长度截为 0
+	// os.O_APPEND: 追加
 	file, err := os.OpenFile("file_test/poem.dat", os.O_WRONLY|os.O_CREATE, 0666)
 	if err != nil {
 		fmt.Println(err.Error())
