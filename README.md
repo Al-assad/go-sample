@@ -2,6 +2,10 @@
 
 <br>
 
+*auto create by [readme_catalog_builder](src/main/readme_catalog_builder.go)*
+
+<br>
+
 ### Go 基本使用示例代码
 #### Go 数据类型、数据结构
 * [datatype_spl.go](./src/spl.assad/main/a1_datatype_spl.go): go 基本数据类型
