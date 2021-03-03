@@ -176,13 +176,18 @@ func sliceCopyAppend() {
 
 // 在不确定 slice 长度的情况下，可以用 append 的方式扩容 slice 长度
 func sliceUnknownCap() {
-	unknownArr := []int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
-	s := make([]int, 0)
-	for _, e := range unknownArr {
-		s = append(s, e)
-	}
-	fmt.Println(len(s))
+	// slice 追加多个元素
+	s1 := []int{1, 2, 3}
+	s1 = append(s1, 4, 5, 6)
+	fmt.Println(s1)
+	// [1 2 3 4 5 6]
 
+	// 将 slice 所有元素一次性追加另一个 slice
+	s2 := []int{1, 2, 3}
+	s3 := []int{4, 5, 6}
+	s2 = append(s2, s3...)
+	fmt.Println(s2)
+	// [1 2 3 4 5 6]
 }
 
 // Buffer 使用，处理 byte[]
@@ -194,5 +199,4 @@ func bufferTest() {
 		buffer.WriteString(string(contentRune[i]))
 	}
 	fmt.Println(buffer.String())
-
 }

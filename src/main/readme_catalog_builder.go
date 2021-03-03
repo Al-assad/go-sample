@@ -6,6 +6,7 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"os"
 	"regexp"
 	"sort"
@@ -55,19 +56,69 @@ type PkgDesc struct {
 }
 
 func main() {
-	BuildAllCatalog()
+	//BuildAllCatalog()
+	BuildAllCatalogToREADME("./README.md")
+}
+
+// 构建字典中所有包的 README 索引，并覆盖输出到 README
+func BuildAllCatalogToREADME(readmePath string) {
+	// 读取原 readme 所有行
+	oldContent, err := ioutil.ReadFile(readmePath)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+	oldRMLines := strings.Split(string(oldContent), "\n")
+
+	// 获取 readme catalog 行位置
+	cStartIndex := 0
+	cEndIndex := 0
+	for i, line := range oldRMLines {
+		if strings.HasPrefix(strings.TrimSpace(line), "<catalog>") {
+			cStartIndex = i
+			continue
+		}
+		if strings.HasPrefix(strings.TrimSpace(line), "</catalog>") {
+			cEndIndex = i
+			break
+		}
+	}
+
+	// 构建新的目录 md 内容
+	newCatalogLines := make([]string, 0)
+	newCatalogLines = append(newCatalogLines, "  ")
+	for _, pkg := range pkgDicts {
+		catalog := BuildCatalog(pkg)
+		newCatalogLines = append(newCatalogLines, catalog...)
+	}
+
+	// 组建新 Readme 内容
+	newRMLines := oldRMLines[0:cStartIndex]
+	newRMLines = append(newRMLines, "<catalog>")
+	newRMLines = append(newRMLines, newCatalogLines...)
+	newRMLines = append(newRMLines, "</catalog>")
+	newRMLines = append(newRMLines, oldRMLines[cEndIndex+1:]...)
+	newRMStr := strings.Join(newRMLines, "\n")
+
+	fmt.Println(newRMStr)
+
+	// 新 Readme 内容写入文件
+	wErr := ioutil.WriteFile(readmePath, []byte(newRMStr), 0666)
+	if wErr != nil {
+		fmt.Println("write readme.md error", wErr.Error())
+	}
+
 }
 
 // 构建字典中所有的包 README 索引，并输出到终端
 func BuildAllCatalog() {
 	for _, pkg := range pkgDicts {
 		catalog := BuildCatalog(pkg)
-		fmt.Println(catalog)
+		fmt.Println(strings.Join(catalog, "\n"))
 	}
 }
 
 // 构建指定包 README 目录索引
-func BuildCatalog(pkgDesc PkgDesc) string {
+func BuildCatalog(pkgDesc PkgDesc) []string {
 	targetPath := pkgDesc.PkgPath
 	resultContent := buildPkgMdLine(pkgDesc.Desc)
 
@@ -76,7 +127,7 @@ func BuildCatalog(pkgDesc PkgDesc) string {
 	if err != nil {
 		fmt.Println("no exists ", targetPath)
 		fmt.Println(err.Error())
-		return ""
+		return nil
 	}
 	fileInfos, _ := dir.Readdir(0)
 
@@ -133,8 +184,12 @@ func BuildCatalog(pkgDesc PkgDesc) string {
 		mdlines = buildMdLines(&goItems)
 	}
 
-	resultContent = resultContent + "\n" + strings.Join(mdlines, "\n") + "\n<br>"
-	return resultContent
+	// 结果行组装
+	resultLines := make([]string, 0)
+	resultLines = append(resultLines, resultContent)
+	resultLines = append(resultLines, mdlines...)
+	resultLines = append(resultLines, "<br/>")
+	return resultLines
 }
 
 // 获取 go 文件头注释
