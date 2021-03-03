@@ -5,6 +5,7 @@
 *auto created by [readme_catalog_builder](src/main/readme_catalog_builder.go)*
 
 <br>
+<catalog>
 
 ### Go 基本使用示例代码
 #### Go 数据类型、数据结构
@@ -53,9 +54,7 @@
 * [file_write_spl.go](./src/spl.assad/main/g2_file_write_spl.go): 文件写入示例
 * [file_copy_spl.go](./src/spl.assad/main/g3_file_copy_spl.go): 文件拷贝示例
   <br>
-
-
-
-
+  
+</catalog>
 <br>
 <br>
