@@ -53,6 +53,12 @@
 * [file_read_spl.go](./src/spl.assad/main/g1_file_read_spl.go): 文件读取示例
 * [file_write_spl.go](./src/spl.assad/main/g2_file_write_spl.go): 文件写入示例
 * [file_copy_spl.go](./src/spl.assad/main/g3_file_copy_spl.go): 文件拷贝示例
+#### Go 异常处理
+* [error_handle.go](./src/spl.assad/main/h1_error_handle.go): go Error 错误处理
+* [error_panic.go](./src/spl.assad/main/h2_error_panic.go): panic 运行时异常的抛出、捕获处理
+<br/>
+### Go 单元测试、基准测试
+* [foo_test.go](./src/spl.assad/func_foo/foo_test.go): go 单元测试、基准测试
 <br/>
 </catalog>
 

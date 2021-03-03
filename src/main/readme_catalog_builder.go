@@ -36,7 +36,10 @@ func init() {
 				"h": "Go 异常处理",
 			},
 		},
-		// other pkg desc
+		{"./src/spl.assad/func_foo",
+			"Go 单元测试、基准测试",
+			nil,
+		},
 	}
 }
 
