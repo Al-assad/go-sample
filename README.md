@@ -63,6 +63,4 @@
 <br/>
 
 </catalog>
-
-</catalog>
 <br/>
