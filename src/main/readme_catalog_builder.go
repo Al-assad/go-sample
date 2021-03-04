@@ -194,7 +194,7 @@ func BuildCatalog(pkgDesc PkgDesc) []string {
 	resultLines := make([]string, 0)
 	resultLines = append(resultLines, resultContent)
 	resultLines = append(resultLines, mdlines...)
-	resultLines = append(resultLines, "<br/>", "")
+	resultLines = append(resultLines, "<br/>  ")
 	return resultLines
 }
 
