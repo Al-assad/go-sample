@@ -56,10 +56,10 @@
 #### Go 异常处理
 * [error_handle.go](./src/base.spl.assad/main/h1_error_handle.go): go Error 错误处理
 * [error_panic.go](./src/base.spl.assad/main/h2_error_panic.go): panic 运行时异常的抛出、捕获处理
-<br/>  
+  
 ### Go 单元测试、基准测试
 * [foo_test.go](./src/base.spl.assad/func_foo/foo_test.go): go 单元测试、基准测试
-<br/>  
+  
 ### Go 并发编程（多线程、协程）
 * [gorutine_spl.go](./src/concurrent.spl.assad/main/s1_gorutine_spl.go): go 协程基本使用
 * [gortn_channel_spl.go](./src/concurrent.spl.assad/main/s2_gortn_channel_spl.go): 使用 channel 进行协程间的通讯
@@ -69,6 +69,6 @@
 * [gortn_lock_spl.go](./src/concurrent.spl.assad/main/s6_gortn_lock_spl.go): 使用 lock 互斥锁实现公有数据的互斥访问
 * [gortn_lock_atomic_spl.go](./src/concurrent.spl.assad/main/s7_gortn_lock_atomic_spl.go): 使用 lock 互斥锁实现 Atomic 原子变量
 * [s_gortn_wait_group_spl.go](./src/concurrent.spl.assad/main/s_gortn_wait_group_spl.go): 使用 waitGroup 优雅等待所有协程执行结束
-<br/>  
+  
 </catalog>
 <br/>
