@@ -9,9 +9,18 @@ import (
 
 func main() {
 	fmt.Println("main start")
-	go task1()
-	go task2()
+	go task1() // 运行协程 task1
+	go task2() // 运行协程 task2
+	time.Sleep(10 * time.Second)
 	fmt.Println("main completed")
+	/**
+	main start
+	task2 start
+	task1 start
+	task2 completed
+	task1 completed
+	main completed
+	*/
 }
 
 func task1() {
