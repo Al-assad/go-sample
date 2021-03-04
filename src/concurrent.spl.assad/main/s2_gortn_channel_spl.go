@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// @desc go 协程通讯 - channel 使用示例
+// @desc 使用 channel 进行协程间的通讯
 /**
 
 // 声明通道，int 类型数据

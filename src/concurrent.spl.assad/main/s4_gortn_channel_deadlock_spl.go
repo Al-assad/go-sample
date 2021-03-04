@@ -5,8 +5,8 @@ import "fmt"
 // @desc go 协程 channel 死锁示例
 
 func main() {
-	//deadLockSpl()
-	//deLockSpl()x
+	deadLockSpl()
+	//deLockSpl()
 }
 
 // 死锁演示
