@@ -18,18 +18,18 @@ var (
 	fileNoteRe     *regexp.Regexp // go 文件注释匹配正则表达式
 	specFileNameRe *regexp.Regexp // 特殊 go 文件名匹配正则表达式
 	pkgDicts       = []PkgDesc{   // 包描述字典列表
-		/*		{"./src/base.spl.assad/main",
-				"Go 基本使用示例代码",
-				map[string]string{
-					"a": "Go 数据类型、数据结构",
-					"b": "Go 控制结构语法",
-					"c": "Go 函数",
-					"d": "Go 标准包",
-					"f": "Go 面向对象",
-					"g": "Go 文件处理",
-					"h": "Go 异常处理",
-				},
-			},*/
+		{"./src/base.spl.assad/main",
+			"Go 基本使用示例代码",
+			map[string]string{
+				"a": "Go 数据类型、数据结构",
+				"b": "Go 控制结构语法",
+				"c": "Go 函数",
+				"d": "Go 标准包",
+				"f": "Go 面向对象",
+				"g": "Go 文件处理",
+				"h": "Go 异常处理",
+			},
+		},
 		{"./src/base.spl.assad/func_foo",
 			"Go 单元测试、基准测试",
 			nil,
