@@ -18,18 +18,18 @@ var (
 	fileNoteRe     *regexp.Regexp // go 文件注释匹配正则表达式
 	specFileNameRe *regexp.Regexp // 特殊 go 文件名匹配正则表达式
 	pkgDicts       = []PkgDesc{   // 包描述字典列表
-		{"./src/base.spl.assad/main",
-			"Go 基本使用示例代码",
-			map[string]string{
-				"a": "Go 数据类型、数据结构",
-				"b": "Go 控制结构语法",
-				"c": "Go 函数",
-				"d": "Go 标准包",
-				"f": "Go 面向对象",
-				"g": "Go 文件处理",
-				"h": "Go 异常处理",
-			},
-		},
+		/*		{"./src/base.spl.assad/main",
+				"Go 基本使用示例代码",
+				map[string]string{
+					"a": "Go 数据类型、数据结构",
+					"b": "Go 控制结构语法",
+					"c": "Go 函数",
+					"d": "Go 标准包",
+					"f": "Go 面向对象",
+					"g": "Go 文件处理",
+					"h": "Go 异常处理",
+				},
+			},*/
 		{"./src/base.spl.assad/func_foo",
 			"Go 单元测试、基准测试",
 			nil,
@@ -127,35 +127,8 @@ func BuildAllCatalog() {
 func BuildCatalog(pkgDesc PkgDesc) []string {
 	targetPath := pkgDesc.PkgPath
 	resultContent := buildPkgMdLine(pkgDesc.Desc)
-
-	// 获取目录下所有文件
-	dir, err := os.Open(targetPath)
-	if err != nil {
-		fmt.Println("no exists ", targetPath)
-		fmt.Println(err.Error())
-		return nil
-	}
-	fileInfos, _ := dir.Readdir(0)
-
-	// 遍历文件，提取 GoItems 要素
-	goItems := make([]GoItem, 0)
-	for _, fileInfo := range fileInfos {
-		// 目录不处理
-		if fileInfo.IsDir() {
-			continue
-		}
-		// go 文件路径
-		filePath := targetPath + "/" + fileInfo.Name()
-		file, _ := os.Open(filePath)
-		note := getFirstNoteFromGoFile(file)
-		if note == "" {
-			continue
-		}
-		// 组装 markdown 要素
-		goItem := GoItem{fileInfo.Name(), filePath, note, ""}
-		goItems = append(goItems, goItem)
-	}
-
+	// 获取目录下的 go 文件标识条目
+	goItems := extractGoItemsInDir(targetPath)
 	// 按照文件排序
 	sort.Slice(goItems, func(i, j int) bool {
 		m := specFileNameRe.FindStringSubmatch(goItems[i].Name)
@@ -196,6 +169,42 @@ func BuildCatalog(pkgDesc PkgDesc) []string {
 	resultLines = append(resultLines, mdlines...)
 	resultLines = append(resultLines, "  ")
 	return resultLines
+}
+
+func extractGoItemsInDir(targetPath string) []GoItem {
+	// 获取目录下所有文件
+	dir, err := os.Open(targetPath)
+	if err != nil {
+		fmt.Println("no exists ", targetPath)
+		fmt.Println(err.Error())
+		return nil
+	}
+	defer dir.Close()
+	fileInfos, _ := dir.Readdir(0)
+
+	// 遍历文件，提取 GoItems 要素
+	goItems := make([]GoItem, 0)
+	for _, fileInfo := range fileInfos {
+		// 目录递归处理
+		if fileInfo.IsDir() {
+			subItems := extractGoItemsInDir(targetPath + "/" + fileInfo.Name())
+			if len(subItems) > 0 {
+				goItems = append(goItems, subItems...)
+			}
+			continue
+		}
+		// go 文件路径
+		filePath := targetPath + "/" + fileInfo.Name()
+		file, _ := os.Open(filePath)
+		note := getFirstNoteFromGoFile(file)
+		if note == "" {
+			continue
+		}
+		// 组装 markdown 要素
+		goItem := GoItem{fileInfo.Name(), filePath, note, ""}
+		goItems = append(goItems, goItem)
+	}
+	return goItems
 }
 
 // 获取 go 文件头注释

@@ -30,3 +30,9 @@ func doSomething(done func()) {
 	defer done()
 	fmt.Println("do something in goroutine")
 }
+
+// 也可以使用空置的 select{} 实现永久等待
+//func runForever()  {
+//	go doSomething()
+//	select{}
+//}
