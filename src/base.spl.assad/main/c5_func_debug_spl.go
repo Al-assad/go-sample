@@ -1,10 +1,10 @@
 package main
 
 import (
+	"base.spl.assad/func_foo"
 	"fmt"
 	"log"
 	"runtime"
-	"spl.assad/func_foo"
 	"time"
 )
 

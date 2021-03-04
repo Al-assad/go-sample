@@ -17,14 +17,8 @@ import (
 var (
 	fileNoteRe     *regexp.Regexp // go 文件注释匹配正则表达式
 	specFileNameRe *regexp.Regexp // 特殊 go 文件名匹配正则表达式
-	pkgDicts       []PkgDesc      // 包描述字典列表
-)
-
-func init() {
-	fileNoteRe, _ = regexp.Compile("//.*@desc (.+)")
-	specFileNameRe, _ = regexp.Compile("([a-zA-Z])+([0-9]+)_(.*)")
-	pkgDicts = []PkgDesc{
-		{"./src/spl.assad/main",
+	pkgDicts       = []PkgDesc{   // 包描述字典列表
+		{"./src/base.spl.assad/main",
 			"Go 基本使用示例代码",
 			map[string]string{
 				"a": "Go 数据类型、数据结构",
@@ -36,11 +30,20 @@ func init() {
 				"h": "Go 异常处理",
 			},
 		},
-		{"./src/spl.assad/func_foo",
+		{"./src/base.spl.assad/func_foo",
 			"Go 单元测试、基准测试",
 			nil,
 		},
+		{"./src/concurrent.spl.assad/main",
+			"Go 并发编程（多线程、协程）",
+			nil,
+		},
 	}
+)
+
+func init() {
+	fileNoteRe, _ = regexp.Compile("//.*@desc (.+)")
+	specFileNameRe, _ = regexp.Compile("([a-zA-Z])+([0-9]+)_(.*)")
 }
 
 // go 文件结构

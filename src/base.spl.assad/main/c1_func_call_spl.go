@@ -1,10 +1,10 @@
 package main
 
 import (
+	myfoo "base.spl.assad/func_foo"
+	"base.spl.assad/main/mypack"
 	"fmt"
 	"runtime"
-	myfoo "spl.assad/func_foo"
-	"spl.assad/main/mypack"
 )
 
 // @desc 函数调用示例

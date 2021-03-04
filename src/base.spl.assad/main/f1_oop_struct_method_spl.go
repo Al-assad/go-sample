@@ -1,8 +1,8 @@
 package main
 
 import (
+	"base.spl.assad/func_foo"
 	"fmt"
-	"spl.assad/func_foo"
 	"strconv"
 )
 
