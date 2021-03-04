@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// @desc go 协程实现生产者-消费者示例：多生产者、单消费者
+// @desc 生产者-消费者示例：多生产者、单消费者
 /*
 produceA： 0
 produceB： 0

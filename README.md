@@ -68,9 +68,9 @@
 * [gortn_channel_actual_spl.go](./src/concurrent.spl.assad/main/s5_gortn_channel_actual_spl.go): 一个协程 channel 实际使用示例（计算分发）
 * [gortn_lock_spl.go](./src/concurrent.spl.assad/main/s6_gortn_lock_spl.go): 使用 lock 互斥锁实现公有数据的互斥访问
 * [gortn_lock_atomic_spl.go](./src/concurrent.spl.assad/main/s7_gortn_lock_atomic_spl.go): 使用 lock 互斥锁实现 Atomic 原子变量
-* [producer_consumer_spl.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl.go): go 协程实现生产者-消费者示例：单生产者、单消费者
-* [producer_consumer_spl3.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl3.go): go 协程实现生产者-消费者示例：单生产者、多消费者
-* [producer_consumer_spl2.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl2.go): go 协程实现生产者-消费者示例：多生产者、单消费者
+* [producer_consumer_spl.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl.go): 生产者-消费者示例：单生产者、单消费者
+* [producer_consumer_spl3.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl3.go): 生产者-消费者示例：单生产者、多消费者
+* [producer_consumer_spl2.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl2.go): 生产者-消费者示例：多生产者、单消费者
 * [s_gortn_wait_group_spl.go](./src/concurrent.spl.assad/main/s_gortn_wait_group_spl.go): 使用 waitGroup 优雅等待所有协程执行结束
   
 </catalog>
