@@ -69,17 +69,20 @@
 * [gortn_lock_spl.go](./src/concurrent.spl.assad/main/s5_gortn_lock_spl.go): 使用 lock 互斥锁实现公有数据的互斥访问
 * [gortn_lock_atomic_spl.go](./src/concurrent.spl.assad/main/s6_gortn_lock_atomic_spl.go): 使用 lock 互斥锁实现 Atomic 原子变量
 * [gortn_wait_group_spl.go](./src/concurrent.spl.assad/main/s7_gortn_wait_group_spl.go): 使用 waitGroup 优雅等待所有协程执行结束
-* [producer_consumer_spl3.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl3.go): 生产者-消费者示例：单生产者、多消费者
 * [producer_consumer_spl.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl.go): 生产者-消费者示例：单生产者、单消费者
 * [producer_consumer_spl2.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl2.go): 生产者-消费者示例：多生产者、单消费者
+* [producer_consumer_spl3.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl3.go): 生产者-消费者示例：单生产者、多消费者
 * [gortn_ticker_spl.go](./src/concurrent.spl.assad/main/s9_gortn_ticker_spl.go): 定时器 Ticker 和 Channel 的结合使用（延迟、超时定时器）
 * [gortn_panic_recover_spl.go](./src/concurrent.spl.assad/main/s10_gortn_panic_recover_spl.go): 协程 recover 示例
 * [gortn_distribute_worker_spl.go](./src/concurrent.spl.assad/main/s11_gortn_distribute_worker_spl.go): channel 实现任务分发的实例
 * [gortn_lazy_evaluation_spl.go](./src/concurrent.spl.assad/main/s12_gortn_lazy_evaluation_spl.go): 实现惰性生成器
 * [gortn_future_spl.go](./src/concurrent.spl.assad/main/s13_gortn_future_spl.go): 实现 feature 模式
+* [gortn_flag_chainning_spl.go](./src/concurrent.spl.assad/main/s14_gortn_flag_chainning_spl.go): 通过 flag 快速生成大量协程
+* [gortn_ncpu_spl.go](./src/concurrent.spl.assad/main/s15_gortn_ncpu_spl.go): GOMAXPROCS 设置多核并行计算
+* [gortn_benckmark.go](./src/concurrent.spl.assad/main/s16_gortn_benckmark.go): 对 goroutine 进行基准测试
   
 </catalog>
+* [gortn_benckmark.go](./src/concurrent.spl.assad/main/s16_gortn_benckmark.go): 对 goroutine 进行基准测试
+  
 </catalog>
-</catalog>
-<br/>
 <br/>
