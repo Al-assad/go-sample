@@ -36,6 +36,7 @@
 * [standpkg_xml_spl.go](./src/base.spl.assad/main/d7_standpkg_xml_spl.go): go xml 处理
 * [standpkg_encode_decode_spl.go](./src/base.spl.assad/main/d8_standpkg_encode_decode_spl.go): go 加解密处理（sha、md5 等）
 * [thirdparty_vandor_spl.go](./src/base.spl.assad/main/d9_thirdparty_vandor_spl.go): vendor 安装、调用第三方包依赖
+* [standpkg_ticker_spl.go](./src/base.spl.assad/main/d9_standpkg_ticker_spl.go): go ticker 定时器使用示例
 #### Go 面向对象
 * [oop_struct_method_spl.go](./src/base.spl.assad/main/f1_oop_struct_method_spl.go): go struct 结构体示例
 * [oop_struct_Getter_Setter.go](./src/base.spl.assad/main/f2_oop_struct_Getter_Setter.go): go struct 结构体示例（字段 Getter、Setter）
@@ -71,10 +72,11 @@
 * [producer_consumer_spl.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl.go): 生产者-消费者示例：单生产者、单消费者
 * [producer_consumer_spl3.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl3.go): 生产者-消费者示例：单生产者、多消费者
 * [producer_consumer_spl2.go](./src/concurrent.spl.assad/main/gortn_producer_consumer_spl/s8_producer_consumer_spl2.go): 生产者-消费者示例：多生产者、单消费者
-* [s_gortn_wait_group_spl.go](./src/concurrent.spl.assad/main/s_gortn_wait_group_spl.go): 使用 waitGroup 优雅等待所有协程执行结束
+* [gortn_wait_group_spl.go](./src/concurrent.spl.assad/main/s8_gortn_wait_group_spl.go): 使用 waitGroup 优雅等待所有协程执行结束
+* [gortn_ticker_spl.go](./src/concurrent.spl.assad/main/s9_gortn_ticker_spl.go): 定时器 Ticker 和 Channel 的结合使用（延迟、超时定时器）
   
 </catalog>
-
-<br/>
+  
+</catalog>
 <br/>
 <br/>
