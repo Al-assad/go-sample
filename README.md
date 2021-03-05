@@ -80,8 +80,6 @@
 * [gortn_flag_chainning_spl.go](./src/concurrent.spl.assad/main/s14_gortn_flag_chainning_spl.go): 通过 flag 快速生成大量协程
 * [gortn_ncpu_spl.go](./src/concurrent.spl.assad/main/s15_gortn_ncpu_spl.go): GOMAXPROCS 设置多核并行计算
 * [gortn_benckmark.go](./src/concurrent.spl.assad/main/s16_gortn_benckmark.go): 对 goroutine 进行基准测试
-  
-</catalog>
 * [gortn_benckmark.go](./src/concurrent.spl.assad/main/s16_gortn_benckmark.go): 对 goroutine 进行基准测试
   
 </catalog>
