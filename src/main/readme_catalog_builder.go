@@ -39,6 +39,18 @@ var (
 			"Go 并发编程（多线程、协程）",
 			nil,
 		},
+		{"./src/net.spl.assad/main",
+			"Go 网络编程",
+			nil,
+		},
+		{"./src/db.spl.assad/net",
+			"Go 数据库操作",
+			nil,
+		},
+		{"./src/db.spl.assad/tool",
+			"Go 常用工具库",
+			nil,
+		},
 	}
 )
 
