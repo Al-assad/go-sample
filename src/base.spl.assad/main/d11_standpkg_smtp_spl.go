@@ -6,7 +6,7 @@ import (
 	"net/smtp"
 )
 
-// @desc go smtp 发送邮件22
+// @desc go smtp 发送邮件
 
 func main() {
 	//sendMail()

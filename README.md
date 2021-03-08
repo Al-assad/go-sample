@@ -37,7 +37,7 @@
 * [standpkg_encode_decode_spl.go](./src/base.spl.assad/main/d8_standpkg_encode_decode_spl.go): go 加解密处理（sha、md5 等）
 * [standpkg_timer_spl.go](./src/base.spl.assad/main/d9_standpkg_timer_spl.go): go ticker 定时器使用示例
 * [thirdparty_vandor_spl.go](./src/base.spl.assad/main/d10_thirdparty_vandor_spl.go): vendor 安装、调用第三方包依赖
-* [standpkg_smtp_spl.go](./src/base.spl.assad/main/d11_standpkg_smtp_spl.go): go smtp 发送邮件22
+* [standpkg_smtp_spl.go](./src/base.spl.assad/main/d11_standpkg_smtp_spl.go): go smtp 发送邮件
 #### Go 面向对象
 * [oop_struct_method_spl.go](./src/base.spl.assad/main/f1_oop_struct_method_spl.go): go struct 结构体示例
 * [oop_struct_Getter_Setter.go](./src/base.spl.assad/main/f2_oop_struct_Getter_Setter.go): go struct 结构体示例（字段 Getter、Setter）
