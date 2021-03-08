@@ -11,6 +11,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/hello", helloHandler)
 	mux.HandleFunc("/echo", echoHandler)
+	mux.HandleFunc("/user", echoHandler)
 	http.ListenAndServe(":2333", mux)
 }
 

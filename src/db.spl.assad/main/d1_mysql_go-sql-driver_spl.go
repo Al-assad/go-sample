@@ -6,7 +6,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
-// @desc mysql 操作（github.com/go-sql-driver/mysql）
+// @desc mysql 操作（go-sql-driver/mysql）
 
 /*
 CREATE TABLE `userinfo` (
