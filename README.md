@@ -83,10 +83,11 @@
   
 ### Go 网络编程
 * [http_request.go](./src/net.spl.assad/main/n1_http_request.go): http request 请求示例
+* [http_server.go](./src/net.spl.assad/main/n2_http_server.go): go http server 简单示例
   
 ### Go 数据库操作
   
 ### Go 常用工具库
   
 </catalog>
-<br/>
+</catalog>
