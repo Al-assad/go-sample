@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-// @desc go http rest server 示例
+// @desc go http rest server 示例 (httprouter)
 
 func main() {
 	router := httprouter.New()
