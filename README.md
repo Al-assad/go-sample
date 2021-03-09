@@ -93,6 +93,7 @@
 * [redis_go-redis_spl.go](./src/db.spl.assad/main/d2_redis_go-redis_spl.go): redis 操作（go-redis/redis）
   
 ### Go 常用工具库
+* [easyjson_spl.go](./src/tool.spl.assad/main/t1_easyjson_spl.go): easyjson 高性能 json 库使用（固定结构 struct）
+* [jsonparser_spl.go](./src/tool.spl.assad/main/t2_jsonparser_spl.go): jsonparser 高性能 json 库使用（灵活结构操作）
   
-</catalog>
 </catalog>
