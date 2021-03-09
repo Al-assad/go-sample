@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"regexp"
 	"strconv"
@@ -19,6 +20,7 @@ func main() {
 	//charAtIndex()
 	//changeCharAtIndex()
 	//regexTest()
+	stringAppend()
 }
 
 // 统计字符长度
@@ -174,4 +176,18 @@ func regexTest() {
 	}
 	r2 := re.ReplaceAllStringFunc(str, replaceFunc)
 	fmt.Println(r2) // John: 2578#34 William: 4567#23 Steve: 5632#18
+}
+
+// 使用缓冲区减少 string 频繁操作书
+// 当需要对一个字符串进行频繁的操作时，谨记在 go 语言中字符串是不可变的（类似 java 和 c#）。使用诸如 a += b 形式连接字符串效率低下，
+// 尤其在一个循环内部使用这种形式。这会导致大量的内存开销和拷贝。应该使用一个字符数组代替字符串，将字符串内容写入一个缓存中
+
+func stringAppend() {
+	var buf bytes.Buffer
+	for i := 0; i < 100; i++ {
+		// string 写入到缓冲区
+		buf.WriteString("ha")
+	}
+	str := buf.String()
+	fmt.Println(str)
 }
