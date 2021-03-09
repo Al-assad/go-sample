@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math/rand"
 	"strconv"
 	"strings"
@@ -66,6 +67,31 @@ func switchTest() {
 		println("on the eve of happy")
 	default:
 		println("partying all night")
+	}
+}
+
+// go switch case 可以接收表达式，因此完全可以使用 switch 代替 if-elseif-else 的结构
+func switchExpresion() {
+	val := 233
+	// 使用 switch 代替 if-elseif-else
+	switch {
+	case val >= 0 && val < 100:
+		fmt.Println("in [0,100)")
+	case val >= 100 && val < 200:
+		fmt.Println("in [100,200)")
+	case val >= 200 && val < 300:
+		fmt.Println("in [200,300)")
+	default:
+		fmt.Println("out [-~,100) and [300, +~)")
+	}
+
+	// switch case 不支持条件下推，但是可以使用 "," 分隔多 case 条件
+	str := "hello, assad"
+	switch {
+	case strings.Contains(str, "hello"), strings.Contains(str, "hi"), strings.Contains(str, "halo"):
+		fmt.Println("Hi")
+	default:
+		fmt.Println("Unable to Understand!")
 	}
 }
 

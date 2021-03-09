@@ -43,21 +43,10 @@ func main() {
 		fmt.Println("is Kitten", kitten.Call())
 		kitten.Taps()
 	}
-	/*
-		is Kitten Miao~
-		There can't be anything on the table
-	*/
 
 	// 接口类型判断
 	whatFuckIsIt(cat)
-	/*
-		is cat
-	*/
 	whatFuckIsIt2(dog)
-	/*
-		is Puppy
-		Who is Good Boy? Is Kitten!!
-	*/
 
 }
 
