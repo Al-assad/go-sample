@@ -24,7 +24,7 @@ func main() {
 // 数组定义、赋值、遍历
 func arrayTest() {
 	// 声明
-	var arr1 [5]string
+	var arr1 [5]string // or -  arr1 := new([5]string)
 	// 赋值
 	arr1[0] = "are"
 	arr1[1] = "you"

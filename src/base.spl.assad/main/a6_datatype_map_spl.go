@@ -17,7 +17,7 @@ func main() {
 func mapDefine() {
 
 	// 声明 map
-	var dict1 map[string]int
+	var dict1 map[string]int // or -  dict1 := make(map[string]int)
 	// map 初始化
 	dict1 = map[string]int{"one": 1, "two": 2}
 	// 获取 map 值

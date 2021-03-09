@@ -1,8 +1,8 @@
 package main
 
 import (
-	"base.spl.assad/func_foo"
 	"fmt"
+	"github.com/Al-assad/go-sample/src/base.spl.assad/func_foo"
 	"strconv"
 )
 
@@ -44,7 +44,7 @@ func main() {
 // 声明、赋值、访问结构体
 func structDefine() {
 	// 声明结构体，此处 u 为 struct 指针
-	u := new(User)
+	u := new(User) // 创建结构体实例
 	// 结构体字段赋值
 	u.name = "assad"
 	u.city = "guangzhou"
@@ -65,8 +65,8 @@ func structDefine() {
 // 结构体声明后直接赋值
 func structDirectInit() {
 	// 此处 u1 为一个 struct 指针
-	u1 := &User{"assad", "guangzhou", 1024}
-	fmt.Printf("%v \n", *u1) // {assad guangzhou 1024}
+	u1 := &User{"assad", "guangzhou", 1024} // 初始化结构体实例
+	fmt.Printf("%v \n", *u1)                // {assad guangzhou 1024}
 
 	// 此处 u2 为一个 struct 实例
 	var u2 User

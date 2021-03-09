@@ -36,22 +36,28 @@ func main() {
 	cat := new(Kitten)
 	dog := new(Puppy)
 
-	// 类型转换：接口转化为实现类
+	// 接口类型判断、类型转换：接口转化为实现类
 	var p Pet = cat
 	kitten, ok := p.(*Kitten)
 	if ok {
 		fmt.Println("is Kitten", kitten.Call())
 		kitten.Taps()
 	}
-	// is Kitten Miao~
-	// There can't be anything on the table
+	/*
+		is Kitten Miao~
+		There can't be anything on the table
+	*/
 
 	// 接口类型判断
 	whatFuckIsIt(cat)
-	// is cat
+	/*
+		is cat
+	*/
 	whatFuckIsIt2(dog)
-	// is Puppy
-	// Who is Good Boy? Is Kitten!!
+	/*
+		is Puppy
+		Who is Good Boy? Is Kitten!!
+	*/
 
 }
 

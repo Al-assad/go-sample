@@ -82,7 +82,6 @@ func timeoutSpl2() {
 		fmt.Println(v)
 	case <-time.After(timeoutSec):
 		fmt.Println("timeout")
-		break
+		return
 	}
-
 }

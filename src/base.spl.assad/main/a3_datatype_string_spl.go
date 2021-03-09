@@ -110,6 +110,11 @@ func string_opera() {
 	r9 := strings.Join(r8, " ")
 	println(r9)
 
+	// 遍历字符串字符
+	for idx, ch := range str {
+		fmt.Println(idx, string(ch))
+	}
+
 }
 
 // 获取字符串指定下标字符

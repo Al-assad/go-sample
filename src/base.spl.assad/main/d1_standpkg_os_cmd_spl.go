@@ -52,6 +52,7 @@ func startProcessTest() {
 		fmt.Printf("Error %v starting process!", err)
 		os.Exit(1)
 	}
+	defer pid.Release() // 释放进程
 	fmt.Printf("The process id is %v", pid)
 
 }
