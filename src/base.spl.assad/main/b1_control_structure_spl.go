@@ -71,7 +71,7 @@ func switchTest() {
 }
 
 // go switch case 可以接收表达式，因此完全可以使用 switch 代替 if-elseif-else 的结构
-func switchExpresion() {
+func switchExpression() {
 	val := 233
 	// 使用 switch 代替 if-elseif-else
 	switch {
@@ -92,6 +92,24 @@ func switchExpresion() {
 		fmt.Println("Hi")
 	default:
 		fmt.Println("Unable to Understand!")
+	}
+}
+
+// go switch 没有 break，如果表达继续往下执行，可以使用 fallthrough 关键字
+func switchFallthrough() {
+	num := 3
+
+	switch num {
+	case 1:
+		fallthrough
+	case 2:
+		fallthrough
+	case 3:
+		fmt.Println(num, " is less than 4")
+	case 4:
+		fmt.Println(num, " is equal 4")
+	default:
+		fmt.Println(num, " is greater than 4")
 	}
 }
 
