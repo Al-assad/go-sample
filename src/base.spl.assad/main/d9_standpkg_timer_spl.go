@@ -16,7 +16,7 @@ func main() {
 }
 
 // Ticker 定时器使用
-// 延迟定时 1s 执行
+// 间隔 1s 执行
 func simpleTicker() {
 	ticker := time.NewTicker(1 * time.Second) // 创建定时器，也可以通过 time.Ticker 创建
 	defer ticker.Stop()                       // 停止定时器
