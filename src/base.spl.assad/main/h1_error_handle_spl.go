@@ -36,6 +36,9 @@ func main() {
 	safeCompute("a + b")
 	safeCompute("32 % 12")
 
+	// 也可以使用以下直接创建一个 error
+	//errors.New("this is error message")
+
 }
 
 // 异常捕获示例
@@ -80,7 +83,6 @@ func computeAlgo(algo string) (float64, error) {
 	if bErr != nil {
 		return 0, NumCovErr{m[2], bErr.Error()} // 返回自定义异常
 	}
-
 	switch o {
 	case "+":
 		return a + b, nil
