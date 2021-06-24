@@ -195,3 +195,17 @@ func stringAppend() {
 	str := buf.String()
 	fmt.Println(str)
 }
+
+// 使用 strings.Builder 也可以通过其内置的缓冲区提高字符串拼接效率
+// strings.Builder 效率约比 bytes.Buffer 高 10%（bytes.Buffer 在转化字符串时需要额外申请一块空间，存放字符串变量）
+func stringAppendWithBuilder() {
+	var builder strings.Builder
+	// 在明确知道拼接后字符串长度的情况下，可以设置 Builder 的容量
+	// builder.Grow(100)
+	for i := 0; i < 100; i++ {
+		// string 写入到缓冲区
+		builder.WriteString("a")
+	}
+	str := builder.String()
+	fmt.Println(str)
+}
