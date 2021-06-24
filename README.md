@@ -47,6 +47,7 @@
 * [oop_runtime_gc_spl.go](./src/base.spl.assad/main/f6_oop_runtime_gc_spl.go): go 显式调用 runtime gc
 * [oop_interface_spl.go](./src/base.spl.assad/main/f7_oop_interface_spl.go): interface 接口使用示例
 * [oop_interface_nest_spl.go](./src/base.spl.assad/main/f8_oop_interface_nest_spl.go): interface 接口嵌套示例
+* [oop_interface_nil_spl.go](./src/base.spl.assad/main/f9_oop_interface_nil_spl.go): 空 interface 使用示例
 * [oop_interface_type_judge_spl.go](./src/base.spl.assad/main/f9_oop_interface_type_judge_spl.go): go 接口类型判断
 * [oop_node_struct_spl.go](./src/base.spl.assad/main/f10_oop_node_struct_spl.go): 一个简单的 Node 节点数据结构
 * [oop_reflect.go](./src/base.spl.assad/main/f11_oop_reflect.go): go 类型反射示例（TypeOf，ValueOf）
@@ -96,4 +97,5 @@
 * [easyjson_spl.go](./src/tool.spl.assad/main/t1_easyjson_spl.go): easyjson 高性能 json 库使用（固定结构 struct）
 * [jsonparser_spl.go](./src/tool.spl.assad/main/t2_jsonparser_spl.go): jsonparser 高性能 json 库使用（灵活结构操作）
   
+</catalog>
 </catalog>
